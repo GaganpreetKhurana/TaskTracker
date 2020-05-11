@@ -23,6 +23,9 @@ td {
     padding: 1%;
 }
 
+/*
+For Serial Number
+ */
 table {
     counter-reset: Serial;
     border-collapse: separate;
