@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+</head>
+
+<body>
+<h1>Task Tracker</h1>
+<section>
+    <form id="addTaskForm" method="post">
+        <label>Add Task <input type="text" name="taskToBeAdded" id="taskToBeAdded" required></label><br><br>
+        <label>Deadline <input type="datetime-local" name="deadline" id="deadline" min="" required></label><br><br>
+        <button type="button" onclick="addTask()">Add</button>
+    </form>
+</section>
+<hr>
+<section>
+    <h3>To Do</h3>
+    <table id="toDo">
+        <tr>
+            <th>S No.</th>
+            <th>Select</th>
+            <th>Task</th>
+            <th>Deadline</th>
+        </tr>
+    </table>
+    <br>
+    <button type="button" onclick="completeTask('toDoCheckBox','completed','completedCheckBox')">Mark Complete</button>
+    <button type="button" onclick="DeleteTask('toDoCheckBox')">Delete</button>
+
+</section>
+<hr>
+<section>
+    <h3>Completed</h3>
+    <table id="completed">
+        <tr>
+            <th>S No.</th>
+            <th>Select</th>
+            <th>Task</th>
+            <th>Deadline</th>
+        </tr>
+    </table>
+    <br>
+    <button type="button" onclick="DeleteTask('completedCheckBox')">Delete</button>
+    <button type="button" onclick="completeTask('completedCheckBox','toDo','toDoCheckBox')">Restore</button>
+
+    <script type="text/javascript" src="javascript/script.js"></script>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    background-color: beige;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    display: inline-block;
+}
+
+hr {
+    width: 50%;
+}
+
+input {
+    display: inline;
+    width: 140px;
+    text-align: right;
+}
+
+td {
+    padding: 1%;
+}
+
+table {
+    counter-reset: Serial;
+    border-collapse: separate;
+}
+
+tr td:first-child:before {
+    counter-increment: Serial;
+    content: counter(Serial);
+}
+
+​
